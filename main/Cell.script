@@ -1,3 +1,38 @@
+-- размножение
+-- 1) обычного деления надвое (саркодовые, жгутиковые).
+-- 2) многократного деления ядра и цитоплазмы- шизогонии (малярийный плазмодий)
+-- 3) спорогонии (малярийный плазмодий)
+-- 4) эндодиогения (токсоплазма)
+
+
+--класс
+-- https://habr.com/ru/articles/259265/
+Cell_Body = {}
+--тело класса
+function Cell_Body:new(vName, vBrain)
+	local obj = {}
+	obj. = 
+	obj.Brain = vBrain
+
+-- метод
+	function obj:getName()
+		return self.firstName 
+	end
+
+	--чистая магия!
+	setmetatable(obj, self)
+	self.__index = self; return obj
+end
+-- 
+-- --создаем экземпляр класса
+-- vasya = Cell_Body:new("Вася", "Пупкин")
+-- 
+-- --обращаемся к свойству
+-- print(vasya.firstName)    --> результат: Вася
+-- 
+-- --обращаемся к методу
+-- print(vasya:getName())  --> результат: Вася
+
 function init(self)
 	-- Add initialization code here
 	-- Learn more: https://defold.com/manuals/script/
