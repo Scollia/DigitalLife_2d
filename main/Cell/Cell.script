@@ -4,7 +4,7 @@
 -- 3) спорогонии (малярийный плазмодий)
 -- 4) эндодиогения (токсоплазма)
 
-
+--[[
 --класс
 -- https://habr.com/ru/articles/259265/
 Cell_Body = {}
@@ -32,11 +32,18 @@ end
 -- 
 -- --обращаемся к методу
 -- print(vasya:getName())  --> результат: Вася
+]]--
+
+go.property("Color_r", 255) 
+go.property("Color_g", 255)
+go.property("Color_b", 255)
+go.property("Color_b", 255)
 
 function init(self)
-	-- Add initialization code here
-	-- Learn more: https://defold.com/manuals/script/
-	-- Remove this function if not needed
+	print(1/self.Color_r)
+	print(1/self.Color_g)
+	print(1/self.Color_b)
+	go.set("#sprite_anim", "tint", vmath.vector4(1/self.Color_r, 1/self.Color_g, 1/self.Color_b, 0.7))
 end
 
 function final(self)
