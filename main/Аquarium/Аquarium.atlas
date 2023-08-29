@@ -1,17 +1,13 @@
 images {
-  image: "/assets/images/Cell_Body.png"
+  image: "/assets/images/\320\220quarium_background.png"
   sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
-  image: "/assets/images/Cell_All.png"
+  image: "/assets/images/\320\220quarium_Water.png"
   sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
-  image: "/assets/images/Cell_Nucleolis.png"
-  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
-}
-images {
-  image: "/builtins/graphics/particle_blob.png"
+  image: "/assets/images/\320\220quarium_Ground.png"
   sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 margin: 0

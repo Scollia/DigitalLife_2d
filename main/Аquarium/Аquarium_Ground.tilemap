@@ -1,0 +1,8 @@
+tile_set: "/main/\320\220quarium/\320\220quarium_Ground.tilesource"
+layers {
+  id: "Ground"
+  z: 0.0
+  is_visible: 1
+}
+material: "/builtins/materials/gui.material"
+blend_mode: BLEND_MODE_ALPHA

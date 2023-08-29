@@ -1,5 +1,8 @@
 [project]
 title = DigitalLife_2d
+version = 0.0.1
+publisher = TIV  Studio
+developer = Scollia
 
 [bootstrap]
 main_collection = /main/main.collectionc
@@ -11,6 +14,7 @@ use_accelerometer = 0
 [display]
 width = 1280
 height = 720
+fullscreen = 0
 
 [script]
 shared_state = 1
@@ -25,6 +29,9 @@ app_icon = /assets/app_icons/appicon.icns
 input_method = HiddenInputField
 
 [physics]
-gravity_y = -1000.0
+gravity_y = -10.0
 scale = 0.01
+
+[collectionfactory]
+max_count = 128
 
