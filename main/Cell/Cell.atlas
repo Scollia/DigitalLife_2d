@@ -1,13 +1,13 @@
 images {
-  image: "/assets/images/Cell_Body.png"
+  image: "/assets/images/cell/Cell_Body.png"
   sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
-  image: "/assets/images/Cell_All.png"
+  image: "/assets/images/cell/Cell_All.png"
   sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
-  image: "/assets/images/Cell_Nucleolis.png"
+  image: "/assets/images/cell/Cell_Nucleolis.png"
   sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {

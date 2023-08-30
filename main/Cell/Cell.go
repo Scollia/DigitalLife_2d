@@ -1,6 +1,6 @@
 components {
   id: "Cell"
-  component: "/main/Cell/Cell.script"
+  component: "/main/cell/cell.script"
   position {
     x: 0.0
     y: 0.0
@@ -16,7 +16,7 @@ components {
 embedded_components {
   id: "sprite_Cell_(biology)"
   type: "sprite"
-  data: "tile_set: \"/main/Cell/Cell.atlas\"\n"
+  data: "tile_set: \"/main/cell/cell.atlas\"\n"
   "default_animation: \"Cell_Body\"\n"
   "material: \"/builtins/materials/sprite.material\"\n"
   "blend_mode: BLEND_MODE_MULT\n"
@@ -36,7 +36,7 @@ embedded_components {
 embedded_components {
   id: "sprite_Nucleolis_(biology)"
   type: "sprite"
-  data: "tile_set: \"/main/Cell/Cell.atlas\"\n"
+  data: "tile_set: \"/main/cell/cell.atlas\"\n"
   "default_animation: \"Cell_Nucleolis\"\n"
   "material: \"/builtins/materials/sprite.material\"\n"
   "blend_mode: BLEND_MODE_ALPHA\n"
@@ -56,7 +56,7 @@ embedded_components {
 embedded_components {
   id: "sprite_anim"
   type: "sprite"
-  data: "tile_set: \"/main/Cell/Cell.atlas\"\n"
+  data: "tile_set: \"/main/cell/cell.atlas\"\n"
   "default_animation: \"particle_blob\"\n"
   "material: \"/builtins/materials/sprite.material\"\n"
   "blend_mode: BLEND_MODE_ALPHA\n"

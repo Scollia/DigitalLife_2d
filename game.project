@@ -3,6 +3,7 @@ title = DigitalLife_2d
 version = 0.0.1
 publisher = TIV  Studio
 developer = Scollia
+compress_archive = 1
 
 [bootstrap]
 main_collection = /main/main.collectionc
@@ -12,9 +13,11 @@ game_binding = /input/game.input_bindingc
 use_accelerometer = 0
 
 [display]
-width = 1280
-height = 720
+width = 1024
+height = 768
 fullscreen = 0
+high_dpi = 1
+display_device_info = 0
 
 [script]
 shared_state = 1

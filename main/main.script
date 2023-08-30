@@ -14,6 +14,6 @@ function on_input(self, action_id, action)
 			Color_g = math.random(10),
 			Color_b = math.random(10)
 		}
-		local carrot_id = factory.create("#cellfactory", pos, nil, NewCellData)
+--		local carrot_id = factory.create("#cellfactory", pos, nil, NewCellData)
 	end
 end
