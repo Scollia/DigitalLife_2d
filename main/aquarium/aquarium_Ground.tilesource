@@ -2502,36 +2502,36 @@ convex_hulls {
 }
 convex_hulls {
   index: 501
-  count: 9
+  count: 8
   collision_group: ""
 }
 convex_hulls {
-  index: 510
+  index: 509
   count: 6
   collision_group: ""
 }
 convex_hulls {
-  index: 516
+  index: 515
   count: 6
   collision_group: ""
 }
 convex_hulls {
-  index: 522
+  index: 521
   count: 4
   collision_group: ""
 }
 convex_hulls {
-  index: 526
+  index: 525
   count: 4
   collision_group: ""
 }
 convex_hulls {
-  index: 530
+  index: 529
   count: 4
   collision_group: ""
 }
 convex_hulls {
-  index: 534
+  index: 533
   count: 4
   collision_group: ""
 }
