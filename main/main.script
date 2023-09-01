@@ -4,54 +4,43 @@
 --]]
 
 local campos = vmath.vector3()
+local initial_wsize = {}
 local nearz = 0.1
 local farz = 2000
 local initial_z = 950
 
-function init(self)
-	msg.post(".", "acquire_input_focus")
---	msg.post("@render:", "use_fixed_fit_projection", { near = 0.1, far = 1000 })
 
-	-- activate camera attached to the player collection
-	-- this will send camera updates to the render script
+function init(self)
 	campos=go.get_position()
 	campos.z=initial_z
-	go.set_position(campos)
-	
-	msg.post("#camera", "acquire_camera_focus")
-	msg.post("@render:", "use_camera_projection")
-
-	print (go.get("#camera", "aspect_ratio"))
-	print (window.get_size("width") .. "x" .. window.get_size("height"))
-	print ("1 ".. window.get_size())
-	print (window.get_size())
-	print (render.get_width()/window.get_size())
-	msg.post("#camera", "set_camera", {aspect_ratio = window.get_size("width")/window.get_size("height"), fov = 0.87, near_z = nearz, far_z = farz})
+	initial_wsize.width, initial_wsize.height = window.get_size()
 
 	window.set_listener(windowevent)
---	windowevent(self, window.WINDOW_EVENT_RESIZED, {width=render_helper.window_res.x, height=render_helper.window_res.y})
+	
+	--	msg.post(".", "acquire_input_focus")
+	msg.post("@render:", "use_camera_projection")
+
+	msg.post("#camera", "acquire_camera_focus")
+	msg.post("#camera", "set_camera", {aspect_ratio = initial_wsize.width/initial_wsize.height, fov = 0.87, near_z = nearz, far_z = farz})
 end
 
 function final(self)
 	msg.post("#camera", "release_camera_focus")
 end
 
-function on_input(self, action_id, action)
-
-end
-
 function windowevent(self, event, data)
 	if event == window.WINDOW_EVENT_RESIZED then
-		print (data.width .. "x" .. data.height)
-		print (data.width/data.height)
-		print (nearz .. "-" .. farz)
-		msg.post("#camera", "set_camera", {aspect_ratio = data.width/data.height, fov = 0.87, near_z = nearz, far_z = farz})
-		if data.width<data.height then
-			campos.z=initial_z*data.height/data.width
-			go.set_position(campos)
+		if (data.width/data.height)<(initial_wsize.width/initial_wsize.height) then
+			campos.z=initial_z*(initial_wsize.width/initial_wsize.height)/(data.width/data.height)
 		else
 			campos.z=initial_z
-			go.set_position(campos)
 		end
+
+		go.set_position(campos)
+		msg.post("#camera", "set_camera", {aspect_ratio = data.width/data.height, fov = 0.87, near_z = nearz, far_z = farz})
 	end
+end
+
+function on_input(self, action_id, action)
+
 end
